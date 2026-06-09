@@ -12,6 +12,7 @@ def get_students():
 
 
 # POST -> Create data
+# Body(...) will be covered in detail in the Request Body module.
 @app.post("/student")
 def create_student(name: str = Body(...)):
     students.append(name)
