@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul",
+        "course": "Python"
+    },
+    {
+        "id": 2,
+        "name": "Priya",
+        "course": "FastAPI"
+    },
+    {
+        "id": 3,
+        "name": "Amit",
+        "course": "Django"
+    },
+    {
+        "id": 4,
+        "name": "Neha",
+        "course": "Data Science"
+    },
+    {
+        "id": 5,
+        "name": "Arjun",
+        "course": "Machine Learning"
+    },
+    {
+        "id": 6,
+        "name": "Sneha",
+        "course": "Java"
+    },
+    {
+        "id": 7,
+        "name": "Vikram",
+        "course": "Spring Boot"
+    },
+    {
+        "id": 8,
+        "name": "Ananya",
+        "course": "React"
+    },
+    {
+        "id": 9,
+        "name": "Karan",
+        "course": "Node.js"
+    },
+    {
+        "id": 10,
+        "name": "Meera",
+        "course": "MongoDB"
+    },
+    {
+        "id": 11,
+        "name": "Rohit",
+        "course": "DevOps"
+    },
+    {
+        "id": 12,
+        "name": "Pooja",
+        "course": "AWS"
+    },
+    {
+        "id": 13,
+        "name": "Sanjay",
+        "course": "Docker"
+    },
+    {
+        "id": 14,
+        "name": "Kavya",
+        "course": "Kubernetes"
+    },
+    {
+        "id": 15,
+        "name": "Nikhil",
+        "course": "Cyber Security"
+    }
+]
