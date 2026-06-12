@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Python"
+    },
+    {
+        "id": 2,
+        "name": "FastAPI"
+    },
+    {
+        "id": 3,
+        "name": "Django"
+    },
+    {
+        "id": 4,
+        "name": "Data Science"
+    },
+    {
+        "id": 5,
+        "name": "Machine Learning"
+    },
+    {
+        "id": 6,
+        "name": "Java"
+    },
+    {
+        "id": 7,
+        "name": "Spring Boot"
+    },
+    {
+        "id": 8,
+        "name": "React"
+    },
+    {
+        "id": 9,
+        "name": "Node.js"
+    },
+    {
+        "id": 10,
+        "name": "MongoDB"
+    },
+    {
+        "id": 11,
+        "name": "DevOps"
+    },
+    {
+        "id": 12,
+        "name": "AWS"
+    },
+    {
+        "id": 13,
+        "name": "Docker"
+    },
+    {
+        "id": 14,
+        "name": "Kubernetes"
+    },
+    {
+        "id": 15,
+        "name": "Cyber Security"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul",
+        "age": 24
+    },
+    {
+        "id": 2,
+        "name": "Priya",
+        "age": 22
+    },
+    {
+        "id": 3,
+        "name": "Amit",
+        "age": 27
+    },
+    {
+        "id": 4,
+        "name": "Neha",
+        "age": 25
+    },
+    {
+        "id": 5,
+        "name": "Arjun",
+        "age": 29
+    },
+    {
+        "id": 6,
+        "name": "Sneha",
+        "age": 23
+    },
+    {
+        "id": 7,
+        "name": "Vikram",
+        "age": 31
+    },
+    {
+        "id": 8,
+        "name": "Ananya",
+        "age": 21
+    },
+    {
+        "id": 9,
+        "name": "Karan",
+        "age": 28
+    },
+    {
+        "id": 10,
+        "name": "Meera",
+        "age": 26
+    },
+    {
+        "id": 11,
+        "name": "Rohit",
+        "age": 30
+    },
+    {
+        "id": 12,
+        "name": "Pooja",
+        "age": 24
+    },
+    {
+        "id": 13,
+        "name": "Sanjay",
+        "age": 33
+    },
+    {
+        "id": 14,
+        "name": "Kavya",
+        "age": 27
+    },
+    {
+        "id": 15,
+        "name": "Nikhil",
+        "age": 29
+    },
+    {
+        "id": 16,
+        "name": "Sakshi",
+        "age": 19
+    }
+]
