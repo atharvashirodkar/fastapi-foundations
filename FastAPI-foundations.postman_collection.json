@@ -1,0 +1,1636 @@
+{
+  "info": {
+    "name": "FastAPI-foundations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "02-routes-methods",
+      "item": [
+        {
+          "name": "getStudents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{base-url}}/students",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "createStudent",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\"Sakshi\"",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{base-url}}/student",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "student"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "replaceStudents",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  \"Arjun\",\r\n  \"Karan\",\r\n  \"Sneha\"\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{base-url}}/students",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateStudent",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"old_name\": \"Arjun\",\r\n  \"new_name\": \"Arjun Sharma\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{base-url}}/student",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "student"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteStudent",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\"Karan\"",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{base-url}}/student",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "student"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "03-parameters",
+      "item": [
+        {
+          "name": "path_parameter",
+          "item": [
+            {
+              "name": "home",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}",
+                  "host": [
+                    "{{base-url}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getUser",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/users/1",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "users",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getProduct",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/products/101",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "products",
+                    "101"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getStudent",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/students/rahul",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "rahul"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "query_parameter",
+          "item": [
+            {
+              "name": "home",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}",
+                  "host": [
+                    "{{base-url}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getProducts",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/products?limit=4",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "4",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "searchProduct",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/search?name=mou",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "mou"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "path_query_parameter",
+          "item": [
+            {
+              "name": "home",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getProduct",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/products/101",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "products",
+                    "101"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getUser-with-queryParam",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/users/101?details=True",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "users",
+                    "101"
+                  ],
+                  "query": [
+                    {
+                      "key": "details",
+                      "value": "True"
+                    },
+                    {
+                      "key": "",
+                      "value": null,
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getUser-without-queryParam",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/users/101",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "users",
+                    "101"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "parameter_validation",
+          "item": [
+            {
+              "name": "home",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}",
+                  "host": [
+                    "{{base-url}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getProduct",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/products?limit=1",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getProduct",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}/products?limit=0",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "0"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "searchProduct",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/search?keyword=lap",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "keyword",
+                      "value": "lap"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "searchProduct-without-query",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/search",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "search"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04-request-body",
+      "item": [
+        {
+          "name": "basic-req-body",
+          "item": [
+            {
+              "name": "home",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\"Rahul\"",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "multiple-field",
+          "item": [
+            {
+              "name": "home",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"age\": 22,\r\n  \"course\": \"Python\",\r\n  \"dob\": \"20-01-2001\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05-pydantic",
+      "item": [
+        {
+          "name": "first-model",
+          "item": [
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"age\": 22,\r\n  \"course\": \"Python\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "optional-fields",
+          "item": [
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"age\": 22,\r\n  \"course\": \"Python\",\r\n  \"email\": \"rahul@example.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "default-values",
+          "item": [
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"age\": 22\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "field-constraints",
+          "item": [
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"age\": 22\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "createProduct",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"price\": 100,\r\n  \"quantity\": 5\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/products",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "createUsername",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"username\": \"Lopez Gomez\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/users",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "nested-models",
+          "item": [
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"age\": 22,\r\n  \"course\": \"Python\",\r\n  \"address\": {\r\n    \"city\": \"Mumbai\",\r\n    \"state\": \"Maharashtra\",\r\n    \"pincode\": \"400001\"\r\n  }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{base-url}}/",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "06-response-models",
+      "item": [
+        {
+          "name": "basic-response-model",
+          "item": [
+            {
+              "name": "getStudent",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n  \"Arjun\",\r\n  \"Karan\",\r\n  \"Sneha\"\r\n]"
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/student",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "student"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "response-filtering",
+          "item": [
+            {
+              "name": "getStudent",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"old_name\": \"Arjun\",\r\n  \"new_name\": \"Arjun Sharma\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/student",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "student"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "response-model-list",
+          "item": [
+            {
+              "name": "getStudents",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"old_name\": \"Arjun\",\r\n  \"new_name\": \"Arjun Sharma\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "response-model-vs-return-type",
+          "item": [
+            {
+              "name": "getStudent-response",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/student/response-model",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "student",
+                    "response-model"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getStudent-return-type",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/student/return-type",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "student",
+                    "return-type"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{base-url}}/",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "07-crud-api",
+      "item": [
+        {
+          "name": "read-students",
+          "item": [
+            {
+              "name": "getStudents",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getStudent",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students/11",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "11"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "create-operation",
+          "item": [
+            {
+              "name": "createStudent",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Arjun Verma\",\r\n  \"course\": \"Data Science\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "update-operation",
+          "item": [
+            {
+              "name": "updateStudent",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Rahul Rane\",\r\n  \"course\": \"Frontend Developer\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students/1",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "delete-operation",
+          "item": [
+            {
+              "name": "deleteStudent",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students/2",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "crud-api",
+          "item": [
+            {
+              "name": "getStudent",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "createStudent",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Sakshi\",\r\n    \"course\": \"Data Science\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updateStudent",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Rohit Mehra\",\r\n    \"course\": \"Backend Developer\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students/11",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "11"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "deleteStudent",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students/2",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "2"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{base-url}}/",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getStudents",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  \"Arjun\",\r\n  \"Karan\",\r\n  \"Sneha\"\r\n]"
+            },
+            "url": {
+              "raw": "http://{{base-url}}/students",
+              "protocol": "http",
+              "host": [
+                "{{base-url}}"
+              ],
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "08-routers",
+      "item": [
+        {
+          "name": "single-router",
+          "item": [
+            {
+              "name": "getStudents",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getStudentByID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students/5",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "5"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "multiple-routers",
+          "item": [
+            {
+              "name": "getStudents",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getCourses",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/courses",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "courses"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "router-prefix-tags",
+          "item": [
+            {
+              "name": "getStudents",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getStudent",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Rohit Mehra\",\r\n    \"course\": \"Backend Developer\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://{{base-url}}/students/1",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "router-package",
+          "item": [
+            {
+              "name": "getStudents",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/students",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "students"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getCourses",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{base-url}}/courses/",
+                  "protocol": "http",
+                  "host": [
+                    "{{base-url}}"
+                  ],
+                  "path": [
+                    "courses",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mini-projects",
+      "item": [
+        {
+          "name": "student-management-system",
+          "item": [
+            {
+              "name": "student-routes",
+              "item": [
+                {
+                  "name": "getStudents",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://{{base-url}}/students",
+                      "protocol": "http",
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "path": [
+                        "students"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "getStudentByID",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"name\": \"Rohit Mehra\",\r\n    \"course\": \"Backend Developer\"\r\n}"
+                    },
+                    "url": {
+                      "raw": "http://{{base-url}}/students/1",
+                      "protocol": "http",
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "path": [
+                        "students",
+                        "1"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "course-routes",
+              "item": [
+                {
+                  "name": "getCourses",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://{{base-url}}/courses/",
+                      "protocol": "http",
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "path": [
+                        "courses",
+                        ""
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "getCourseByID",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://{{base-url}}/courses/2",
+                      "protocol": "http",
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "path": [
+                        "courses",
+                        "2"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "marks-routes",
+              "item": [
+                {
+                  "name": "getStudentsMarks",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://{{base-url}}/marks",
+                      "protocol": "http",
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "path": [
+                        "marks"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "getStudentMarks",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "http://{{base-url}}/marks/student/3",
+                      "protocol": "http",
+                      "host": [
+                        "{{base-url}}"
+                      ],
+                      "path": [
+                        "marks",
+                        "student",
+                        "3"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base-url",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
